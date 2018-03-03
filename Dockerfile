@@ -50,7 +50,7 @@ RUN groupadd -g 998 carbon ;\
 	chown -R carbon /opt/graphite/storage/whisper
 
 # Install grafana
-RUN wget -O /tmp/grafana.deb https://grafanarel.s3.amazonaws.com/builds/grafana_latest_amd64.deb ;\
+RUN wget -O /tmp/grafana.deb https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_5.0.0_amd64.deb ;\
 	cd /tmp && dpkg -i grafana.deb && rm grafana.deb
 
 # cleanup
